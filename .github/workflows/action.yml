@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      - name: 'Get Weather'
-        run: bash ./email.sh
+      # - name: 'Get Weather'
+      #   run: bash ./email.sh
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Shanghai Weather Report (${{env.REPORT_DATE}})
-          htmlBody: file://result.html
+          body: file://test.txt
           to: ${{ secrets.MAIL_USERNAME }}
           from: "智兵"
           content_type: text/html
