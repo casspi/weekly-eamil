@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
-      # - name: 'Get Weather'
-      #   run: bash ./email.sh
-      # - name: 'Get Date'
-      #   run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
+      - name: 'Get Weather'
+        run: bash ./email.sh
+      - name: 'Get Date'
+        run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
