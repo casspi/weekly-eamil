@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 前端小组周会-会议纪要 (${{env.REPORT_DATE}})
-          body_html: file://test.txt
+          body: file://test.txt
           to: ${{ secrets.MAIL_USERNAME }},bing.zhi@autostreets.com
           from: "智兵"
           content_type: text/html
