@@ -1,0 +1,26 @@
+{
+  "name": "weekly-email",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casspi/weekly-email.git"
+  },
+  "author": "kassadin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/casspi/weekly-email/issues"
+  },
+  "homepage": "https://github.com/casspi/weekly-email#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.4"
+  }
+}
